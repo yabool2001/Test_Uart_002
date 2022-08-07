@@ -99,15 +99,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
-  HAL_StatusTypeDef uart_status = HAL_UART_Transmit ( &huart2 , (const uint8_t *) s_start , strlen ( s_start ) , UART_TX_TIMEOUT ) ;
-  if ( uart_status != HAL_OK )
-  {
-      Error_Handler () ;
-  }
-  if ( HAL_UART_Transmit ( &huart1 , (const uint8_t *) s_start , sizeof ( s_start ) , UART_TX_TIMEOUT ) != HAL_OK )
-  {
-      Error_Handler () ;
-  }
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
